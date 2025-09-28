@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+    --font-lexend: "Lexend", sans-serif;
+    --font-maple-mono: "Maple Mono", monospace;
+    --color-gmstn-purple: #bd66d4;
+    --color-gmstn-black: #060116;
+    --color-gmstn-white: #d6c5f8;
+}

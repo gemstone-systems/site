@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/lexend": "^5.2.11",
+    "@fontsource/maple-mono": "^5.2.5",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.14.1",
     "tailwindcss": "^4.1.13"
