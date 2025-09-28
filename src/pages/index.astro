@@ -3,5 +3,150 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-    <h1>Hello!!</h1>
+    <div class="flex flex-col items-center justify-center gap-20 pt-26 pb-36">
+        <div>
+            <img src="/favicon.svg" class="fill-gmstn-purple h-16 w-16" />
+        </div>
+        <div
+            class="[&_sup]:text-gmstn-purple flex max-w-200 flex-col gap-8 [&_sup]:cursor-pointer [&_sup]:italic [&_sup]:hover:underline"
+        >
+            <div class="flex flex-col items-start gap-4">
+                <h1
+                    class="font-maple-mono text-gmstn-purple cursor-pointer text-2xl font-bold hover:underline"
+                >
+                    our tools suck.
+                </h1>
+                <p>
+                    not the dev part, that part's honestly fine.<sup>1</sup> we're
+                    talking about the everything else part.
+                </p>
+                <p>
+                    you know what we mean. your editor's fine, your compiler
+                    works great, your framework doesn't hate you (java spring
+                    users dni)<sup>2</sup>, git does git things, and curl exists
+                    everywhere (nix users also dni)<sup>2, 3</sup>.
+                </p>
+                <p>it's all the non-dev stuff that really really sucks.</p>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+                <h1
+                    class="font-maple-mono text-gmstn-purple cursor-pointer text-2xl font-bold hover:underline"
+                >
+                    from the moment you start your day,
+                </h1>
+                <p>
+                    you get hit with a deluge of things, all from different
+                    apps.
+                </p>
+                <p>
+                    twelve unread channels on slack along with eight <span
+                        class="text-gmstn-purple cursor-pointer font-medium hover:underline"
+                        >@mentions</span
+                    >, two from your PM for jira updates, one from the ci bot,
+                    one from the half-broken zapier integration an intern wrote,
+                    and four from zendesk pinging your team.
+                </p>
+                <p>
+                    and <em>then</em> you go deal with the out-links. you open jira
+                    (or linear if you're lucky), github, notion (or god forbid confluence),
+                    zendesk, asana, gsuite, and before you know it, you've hit 45
+                    new tabs across 6 different services. your m2 macbook pro is
+                    whining for mercy.
+                </p>
+                <p>and all of this happens before you even open vscode.</p>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+                <h1
+                    class="font-maple-mono text-gmstn-purple cursor-pointer text-2xl font-bold hover:underline"
+                >
+                    even when you're actually working.
+                </h1>
+                <p>
+                    you'll be debugging. the bug report is stuffed into linear,
+                    the docs are in notion, the discussion of the bug is somehow
+                    spread across three separate slack threads. congrats, those
+                    45 tabs are now 12 tabs! it's still twelve whole pages you
+                    need to switch through though.
+                </p>
+                <p>
+                    suddenly, you get those three knocks from slack. your tech
+                    lead is asking for an update and oops, there goes all the
+                    context you've built up in your head as you're answering
+                    their question and reopening more tabs.
+                </p>
+                <p>
+                    by the time you're done, you've wasted an hour and your
+                    brain needs to pick up where you left off except you have to
+                    re-read everything to get back to where you were. you
+                    weren't shipping code, you were playing detective in your
+                    own knowledge base.
+                </p>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+                <h1
+                    class="font-maple-mono text-gmstn-purple cursor-pointer text-2xl font-bold hover:underline"
+                >
+                    and that's not even the worst part.
+                </h1>
+                <p>
+                    say you've had enough of it. no more! no more slack, no more
+                    jira, no more notion! you'll go to skype (teams), use word
+                    docs and send emails like it's 2002.
+                </p>
+                <p>
+                    and it's then you realise that each platform really doesn't
+                    want you to leave. sure. slack lets you export your
+                    messages. but guess what, it's plain old json. good luck
+                    trying to figure out how to parse through a couple million
+                    messages worth of unstructured data.
+                </p>
+                <p>
+                    and slack's the nice one. ever try exporting jira? exporting
+                    zendesk? exporting <em>notion</em>? it's impossible to get
+                    anywhere, and let's not even get started with your
+                    integrations. that ci pipeline's not gonna rebuild itself.
+                </p>
+                <p>they don't want you to leave. that's the business model.</p>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+                <h1
+                    class="font-maple-mono text-gmstn-purple cursor-pointer text-2xl font-bold hover:underline"
+                >
+                    we deserve better. <em>you</em> deserve better.
+                </h1>
+                <p>
+                    no more context loss, no more broken integrations, no more
+                    lock in. all of your context and knowledge in one place,
+                    meshed within each other, and all entirely <span
+                        class="font-bold underline"><em>yours</em></span
+                    >.
+                </p>
+                <p>
+                    normally this is where we'd promise you that we'll never
+                    hold your data hostage, or we'll never jack your prices, or
+                    whatever else gets said.
+                </p>
+                <p>
+                    we're not going to do that. because no matter how much we
+                    might want to try to do so in the future, we literally
+                    can't. you can thank the <a
+                        href="https://atproto.com"
+                        class="text-gmstn-purple hover:text-gmstn-white underline transition"
+                        >atproto</a
+                    > for that.
+                </p>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+                <h1 class="text-2xl font-bold">let's fucking do this.</h1>
+            </div>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+            <div>
+                <img src="/favicon.svg" class="fill-gmstn-purple h-8 w-8" />
+            </div>
+            <div>
+                <h1 class="text-gmstn-grey">Gemstone Systems</h1>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
