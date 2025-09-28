@@ -8,6 +8,5 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-    site: "https://gemstone-systems.github.io",
-    base: "/site",
+    site: "https://gmstn.systems",
 });
