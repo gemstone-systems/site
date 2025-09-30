@@ -1,0 +1,13 @@
+---
+interface Props {
+    position: number;
+    content?: string;
+}
+
+const { position, content } = Astro.props;
+---
+
+<div>
+    <span class="text-gmstn-purple">{position}.</span>
+    {content ? content : <slot />}
+</div>
