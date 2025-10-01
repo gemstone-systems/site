@@ -1,0 +1,156 @@
+---
+import Manifesto from "../components/Manifesto.astro";
+import ParagraphWithHeader from "../components/ParagraphWithHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <div class="flex flex-col items-center gap-2">
+        <a href="/">
+            <div>
+                <img
+                    src="/favicon.svg"
+                    class="fill-gmstn-purple h-16 w-16 transition-all hover:h-18 hover:w-18"
+                />
+            </div>
+        </a>
+        <a href="/" class="text-gmstn-purple transition hover:underline">
+            <ParagraphWithHeader
+                header="if you haven't read the manifesto yet"
+            />
+            <ParagraphWithHeader header="we suggest you do by clicking here." />
+        </a>
+    </div>
+    <div class="flex flex-col items-center gap-4">
+        <h1 class="text-gmstn-grey">a proposal to do better</h1>
+        <Manifesto>
+            <ParagraphWithHeader header="how do we intend on doing better?">
+                <p>
+                    there are three parts to this answer. each of which we'll
+                    explain in detail further down.
+                </p>
+                <p>1. a protocol that does better;</p>
+                <p>2. an ecosystem that does better, and;</p>
+                <p>3. a provider that does better.</p>
+            </ParagraphWithHeader>
+            <ParagraphWithHeader header="a protocol that does better.">
+                <p>
+                    as alluded to in the <a
+                        href="/"
+                        class="text-gmstn-purple hover:underline">manifesto</a
+                    >, we have opted to build on the <a
+                        href="https://atproto.com"
+                        class="text-gmstn-purple hover:underline">atproto</a
+                    >, also known as the authenticated transfer protocol from <a
+                        href="https://bsky.social/"
+                        class="text-gmstn-purple hover:underline"
+                        >bluesky social.</a
+                    >
+                </p>
+                <p>
+                    you might be asking 'what does a decentralised social media
+                    protocol have to do with real time communications like
+                    slack, or a project tracker like jira/linear?' and you'd be
+                    justified in asking that!
+                </p>
+                <p>
+                    while the protocol itself was built to host decentralised
+                    social media applications, the protocol team at bluesky have
+                    created something that is impressively flexible.
+                </p>
+                <p>
+                    if you're familiar with the terms pds and 'relay', 'appview'
+                    and social-app, then you'd be familiar with the fact that
+                    actually, the protocol spec does not define any of these
+                    pieces of infrastructure. a valid atproto application can
+                    just be a client app talking directly to a pds with zero
+                    external support from a relay, appview, or even plc
+                    directory (provided you know the endpoint to talk to the
+                    pds).
+                </p>
+                <p>
+                    the benefit of building on atproto is twofold. one is that
+                    right now, there are (x) self-hosted pds instances without
+                    counting the bluesky provided mushroom pdses. this number
+                    will only continue to grow as the protocol matures and more
+                    and more people create accounts on the atmosphere. this
+                    means that we effectively have (x) existing databases to use
+                    as what is effectively an rbac and references engine.
+                </p>
+                <p>
+                    the second benefit is that the atproto is an open protocol.
+                    every pds is publicly viewable, and the data on those pdses
+                    are all public (for the time being). this means that in the
+                    future, if we end up making decisions that negatively impact
+                    our users, our users can simply leave and take their data
+                    with them, <strong class="font-semibold"
+                        >even if they are on infra that we provide</strong
+                    >
+                </p>
+                <p>
+                    the term bluesky uses for this is 'credible exit', and by
+                    building on the atproto, our users are conferred these
+                    benefits.
+                </p>
+                <p>
+                    there are drawbacks to this, both on our side as a provider,
+                    and on our users' side. we will cover these drawbacks
+                    further on.
+                </p>
+            </ParagraphWithHeader>
+            <ParagraphWithHeader header="an ecosystem that does better.">
+                <p>
+                    right now, all, if not most, of our work products are all
+                    their own app. there is no guarantee that someone that is
+                    using jira is also using confluence, or that someone that is
+                    using slack is also using zendesk. the ecosystem is a mess,
+                    held together by patchwork integrations that cost companies
+                    thousands to enable.
+                </p>
+                <p>
+                    for a good number of companies, this doesn't matter. they
+                    have effectively infinite vc money which they can burn to
+                    fund their subscriptions to these products. but that doesn't
+                    resolve the fact that if you had a problem with a slack
+                    integration, you wouldn't know if the issue was on slack's
+                    side, or on the integrator's side. and vice versa.
+                </p>
+                <p>
+                    furthermore, it doesn't resolve the issue of having to
+                    context-switch between multiple apps at the same time in
+                    order to understand the necessary context. each app has
+                    their own abstractions, their own ways of mapping your data
+                    to their services, and if you're not familiar with all of
+                    them, it becomes a guessing game of what's meant to go where
+                    and what can be found where.
+                </p>
+                <p>
+                    by building as a single platform to do basically everything
+                    (real time messaging, voip, video calls; project management;
+                    knowledge base; helpdesk triaging; workflow automations;
+                    etc.), we can bypass this issue altogether. one single point
+                    of contact, and with atproto, it is unlikely that there is
+                    one single point of failure either.
+                </p>
+                <p>
+                    this is a rather monumental undertaking, and we acknowledge
+                    that. we will be incrementally providing these features and
+                    focusing on implementing simple real time messaging with a
+                    simple markdown knowledge base first.
+                </p>
+                <p>
+                    and once again, atproto's benefits are conferred to us here.
+                    we intend on offering certain integrations as a
+                    closed-source implementation. but, ultimately the data that
+                    our implementation accesses is structured through lexicons,
+                    which means that community implementations can exist, and if
+                    an end-user would like to write their own implementation, we
+                    cannot stop them.
+                </p>
+            </ParagraphWithHeader>
+            <ParagraphWithHeader header="a provider that does better">
+                <p>i got nothing vro pls help</p>
+            </ParagraphWithHeader>
+        </Manifesto>
+    </div>
+</BaseLayout>
